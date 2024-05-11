@@ -10,11 +10,14 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+
+
 .navbar {
     display: flex;
     justify-content: space-around;
     background-color: #f5f5f5;
     padding: 10px;
+    border-bottom: 2px solid black;
 }
 
 .navbar a {
@@ -30,6 +33,7 @@ h1 {
 
 .photo-group {
     display: grid;
+    flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
@@ -39,7 +43,7 @@ h1 {
 }
 
 .product-card img {
-    width: 75%;
+    width: 50%;
     height: auto;
 }
 
@@ -51,8 +55,7 @@ h1 {
     margin: 5px 0;
 }
 
-/* Estilos para el footer */
-footer {
+.footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -61,13 +64,88 @@ footer {
     color: white;
 }
 
-.footer-item svg {
-    padding: 6px; 
-    border: 0.5px solid white; 
-    border-radius: 50%;
-    background-color: white; 
+.g {
+    display: flex;
+    align-items: center; 
+    margin: 10px;
 }
 
-footer svg {
+.svg-footer {
+    padding: 10px;
+    border: 0.5px solid white;
+    border-radius: 50%;
+    background-color: white;
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    margin-left: 15px; 
+}
+
+
+.footer svg {
     fill: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .svgNavImg{
+      display: none;
+    }
+    .ref{
+        display: none;
+    }
+    .photo-group {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background-color: #212429;
+        color: white;
+    }
+
+    .g {
+        display: flex;
+        align-items: center; 
+        margin: 10px; 
+        border-bottom: 1px solid white;
+
+    }
+    
+    .svg-footer {
+        padding: 10px;
+        border: 0.5px solid white;
+        border-radius: 50%;
+        background-color: white;
+        width: 50px; 
+        height: 50px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-text {
+        margin-left: 15px; 
+    }
+
+
+
 }
